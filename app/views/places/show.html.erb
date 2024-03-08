@@ -8,9 +8,13 @@
 <% end %>
 
 <p>
+<%if @user !=nil%>
   <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
+  <% end %>
 </p>
 
 <p>
+
   <a href="/places">Back to All Places</a>
+ 
 </p>

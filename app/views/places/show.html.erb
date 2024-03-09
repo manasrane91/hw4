@@ -1,6 +1,6 @@
 <h1><%= @place["name"] %></h1>
 
-<h2>My Entries</h2>
+<h2 class="mt-4">My Entries</h2>
 <div class="container">
 <div class="row">
 <% for entry in @entries %>
@@ -22,12 +22,12 @@
 
 <p>
 <%if @user !=nil%>
-  <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
+  <a href="/entries/new?place_id=<%= @place["id"] %>" class="btn btn-secondary" role="button">New Entry</a>
   <% end %>
 </p>
 
 <p>
 
-  <a href="/places">Back to All Places</a>
+  <a href="/places" class="btn btn-secondary" role="button">Back to All Places</a>
  
 </p>

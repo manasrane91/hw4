@@ -29,12 +29,14 @@
     <a class="navbar-brand" href="/">My App</a>
     <span class="navbar-text">
     <div>
-      <a href="/">Home</a>
+      <a href="/" class="btn btn-secondary" role="button">Home</a>
       <%if @user !=nil%>
-      <a href="/logout">Logout</a>
+      <a href="/logout" class="btn btn-secondary" role="button" >Logout</a>
+      
+
       <%else %>
-      <a href="/login">Login</a>
-      <a href="/users/new">Signup</a>
+      <a href="/login" class="btn btn-secondary" role="button">Login</a>
+      <a href="/users/new" class="btn btn-secondary" role="button">Signup</a>
       <% end %>
     </div>
     </span>

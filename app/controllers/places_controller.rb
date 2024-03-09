@@ -6,7 +6,12 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find_by({ "id" => params["id"] })
+    if @user !=nil
     @entries = Entry.where({ "place_id" => @place["id"],"user_id" => @user["id"]})
+    else 
+      flash["notice"] = "please login"
+      redirect_to "/login"
+    end
   end
 
   def new

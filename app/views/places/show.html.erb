@@ -1,4 +1,4 @@
-<h1><%= @place["name"] %></h1>
+<h1 class="mt-4"><%= @place["name"] %></h1>
 
 <h2 class="mt-4">My Entries</h2>
 <div class="container">
@@ -6,8 +6,8 @@
 <% for entry in @entries %>
 <div class="col-md-4 pt-3">
   <h3><%= entry["title"] %></h3>
-  <h4><%= entry["occurred_on"] %></h4>
-  <p><%= entry["description"] %></p>
+  <h4 class="mt-4"><%= entry["occurred_on"] %></h4>
+  <p class="mt-4"><%= entry["description"] %></p>
   <% if entry.uploaded_image.attached? %>
   <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
 <% else %>
